@@ -11,8 +11,7 @@ from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 def generate_html(data, filename):
     """Genera el reporte en formato HTML a partir de los datos recolectados."""
     style = """... (El mismo <style> que tenías en tu script original) ..."""
-    # ... (El resto de la lógica de tu función generate_html_report) ...
-    # Simplemente la copiamos aquí.
+   
     style = """
     <style>
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f4f9; color: #333; margin: 0; padding: 20px; }

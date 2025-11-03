@@ -7,7 +7,7 @@ import socket
 import datetime
 import os
 import threading
-import pythoncom  # ### NUEVO ### - Importamos la librería necesaria para COM en hilos
+import pythoncom  
 
 # Importa las funciones de los otros archivos
 import InfoSystem_backend as backend
@@ -103,8 +103,7 @@ class App(tk.Tk):
         thread.start()
 
     def run_report_logic(self):
-        # ### CAMBIO PRINCIPAL ###
-        # Inicializamos COM para este hilo secundario.
+       
         pythoncom.CoInitialize()
         try:
             self.status_label.config(text="Conectando con WMI...")
@@ -145,9 +144,7 @@ class App(tk.Tk):
             messagebox.showerror("Error Crítico", f"Ocurrió un error inesperado:\n{e}")
         
         finally:
-            # ### CAMBIO PRINCIPAL ###
-            # Siempre nos aseguramos de liberar los recursos COM al final de la ejecución del hilo.
-            # Y luego actualizamos la GUI.
+           
             self.after(100, self.reset_ui)
             pythoncom.CoUninitialize()
 

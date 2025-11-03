@@ -8,7 +8,6 @@ import re
 
 # --- Todas tus funciones de obtención de datos van aquí ---
 # (get_system_info, get_bios_info, get_os_info, etc.)
-# El código es idéntico al que proporcionaste, así que lo incluyo sin cambios.
 
 def get_system_info(c):
     try:
@@ -88,8 +87,7 @@ def get_cpu_info(c):
 def get_installed_software(c):
     software_list = []
     try:
-        # Win32_Product es muy lento e ineficiente. Una alternativa más rápida es buscar en el registro.
-        # Por simplicidad, mantenemos Win32_Product pero avisamos al usuario.
+    
         for product in c.Win32_Product():
             software_list.append({"Nombre": product.Name, "Versión": product.Version, "Vendedor": product.Vendor})
         return sorted(software_list, key=lambda x: x['Nombre'])

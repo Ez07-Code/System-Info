@@ -1,0 +1,3 @@
+pyinstaller --windowed --onefile --icon=./hola.ico hola.py
+
+pyinstaller --onefile --noconsole --name="SysReporter" InfoSystem_GUI.py
