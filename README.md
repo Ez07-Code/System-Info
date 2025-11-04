@@ -2,6 +2,8 @@
 
 Herramienta de escritorio para Windows que recopila información detallada del sistema (hardware y software) y genera reportes en formatos HTML, PDF y Excel.
 
+![Captura de pantalla de Network Tools Pro](systeminfo.png)
+
 ## Características
 
 - **Interfaz Gráfica Sencilla**: Permite seleccionar fácilmente qué información incluir en el reporte.
